@@ -3,7 +3,7 @@
 
 Integrantes:
 - German Cuevas — 202473042-8
-- Nelson Cuevas — Rol
+- Nelson Cuevas — 202392825-9
 
 ### Entorno de desarrollo
 
