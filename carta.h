@@ -10,3 +10,5 @@ struct carta {
 
 void generarbaraja(carta baraja[52]);
 void barajar(int orden[52]);
+
+#endif

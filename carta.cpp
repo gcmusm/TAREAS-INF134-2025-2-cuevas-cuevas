@@ -12,7 +12,7 @@ void generarbaraja(carta baraja[52]){
                 baraja[pos].valor=11;
             }
             else if(c>=11){
-                baraja[pos].valor =c;
+                baraja[pos].valor =10;
             }
             else{
                 baraja[pos].valor =c;
