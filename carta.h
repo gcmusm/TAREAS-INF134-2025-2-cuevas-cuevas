@@ -9,4 +9,4 @@ struct carta {
 };
 
 void generarbaraja(carta baraja[52]);
-void barajarindices();
+void barajar(int orden[52]);
