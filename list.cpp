@@ -20,3 +20,12 @@ bool eraseen(lista& L, int pos){
     }
 
 }
+int length(lista& L) {
+    int cont=0;
+    nodo* aux=L.head;
+    while(aux!=nullptr) {
+        contador++;
+        aux=aux->sig;
+    }
+    return cont;
+}
