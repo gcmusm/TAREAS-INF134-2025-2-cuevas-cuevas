@@ -5,12 +5,12 @@
 struct nodo{
     carta info;
     nodo* sig;
-}
+};
 
 struct lista{
     nodo* head;
     lista() : head(nullptr) {}
-}
+};
 
 void append(lista& L, const carta& c);
 bool eraseen(lista& L, int pos);          
