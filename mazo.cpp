@@ -24,7 +24,6 @@ void repartir(lista& mazo, lista& mano, int n){
     }
 
 }
-
 void reponerHasta(lista& mazo, lista& mano, int objetivo){
     if (objetivo<=0) 
         return;

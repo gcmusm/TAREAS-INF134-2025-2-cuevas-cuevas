@@ -1,5 +1,6 @@
 #include "carta.h"
 #include <cstdlib>
+#include <ctime>     
 
 void generarbaraja(carta baraja[52]){
     const char palos[4] = {'C', 'T', 'E', 'D'};
@@ -24,7 +25,7 @@ void generarbaraja(carta baraja[52]){
 };
 
 void barajar(int orden[52]){
-    for(int i=0, i<52, i++){ //llenamos la lista con  los indices de las cartas
+    for(int i=0; i<52; i++){ //llenamos la lista con  los indices de las cartas
         orden[i]=i;
     }
     srand(time(nullptr)); //definimos el valor de la semilla segun el reloj del pc 
