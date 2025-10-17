@@ -18,4 +18,5 @@ int  length(const lista& L);
 bool get(const lista& L, int pos, carta&);  
 void clear(lista& L);                       
 bool popfront(lista& L, carta& out);  
+
 #endif
