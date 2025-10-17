@@ -64,7 +64,7 @@ bool get(const lista& L, int pos, carta& c) {
         index++;
     }
     if (aux==nullptr) return false;
-    c=aux->data;
+    c=aux->info;
     return true;
 }
 bool popfront(lista& L, carta& out){
