@@ -26,7 +26,7 @@ bool eraseen(lista& L, int pos){
     }
     nodo* prev = L.head;
     for(int i =0; prev != nullptr && i<pos-1; i++){
-        prev = prev->sig
+        prev = prev->sig;
     }
     if(prev ==nullptr ||prev->sig == nullptr){
         return false;
@@ -41,7 +41,7 @@ int length(lista& L) {
     int cont=0;
     nodo* aux=L.head;
     while(aux!=nullptr) {
-        contador++;
+        cont++;
         aux=aux->sig;
     }
     return cont;
@@ -73,7 +73,7 @@ bool popfront(lista& L, carta& out){
     }
     nodo* borrar= L.head;
     out=borrar->info;
-    L.head= borrar->sig
+    L.head= borrar->sig;
     delete borrar;
     return true;
 }
