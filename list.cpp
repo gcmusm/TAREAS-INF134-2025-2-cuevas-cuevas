@@ -46,3 +46,24 @@ int length(lista& L) {
     }
     return cont;
 }
+
+void clear(lista& L){
+    nodo* aux= L.head;
+    while(aux!=nullptr){
+        nodo* borrar= aux;
+        aux= aux->sig;
+        delete borrar;
+    }
+    L.head=nullptr;
+}
+
+bool popfront(lista& L, carta& out){
+    if(L.head==nullptr){
+        return false;
+    }
+    nodo* borrar= L.head;
+    out=borrar->info;
+    L.head= borrar->sig
+    delete borrar;
+    return true;
+}
