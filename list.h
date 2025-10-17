@@ -17,5 +17,5 @@ bool eraseen(lista& L, int pos);
 int  length(const lista& L);              
 bool get(const lista& L, int pos, carta&);  
 void clear(lista& L);                       
-bool popFront(lista& L, carta& out);  
+bool popfront(lista& L, carta& out);  
 #endif
