@@ -46,7 +46,6 @@ int length(lista& L) {
     }
     return cont;
 }
-
 void clear(lista& L){
     nodo* aux= L.head;
     while(aux!=nullptr){
@@ -56,7 +55,18 @@ void clear(lista& L){
     }
     L.head=nullptr;
 }
-
+bool get(const lista& L, int pos, carta& c) {
+    if (pos<0) return false;
+    nodo*aux=L.head;
+    int index = 0;
+    while (aux!=nullptr && index<pos) {
+        aux =aux->sig;
+        index++;
+    }
+    if (aux==nullptr) return false;
+    c=aux->data;
+    return true;
+}
 bool popfront(lista& L, carta& out){
     if(L.head==nullptr){
         return false;
