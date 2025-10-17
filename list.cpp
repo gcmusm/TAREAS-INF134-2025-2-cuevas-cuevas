@@ -36,3 +36,13 @@ bool eraseen(lista& L, int pos){
     delete borrar;
     return true;
 }
+
+int length(lista& L) {
+    int cont=0;
+    nodo* aux=L.head;
+    while(aux!=nullptr) {
+        contador++;
+        aux=aux->sig;
+    }
+    return cont;
+}
