@@ -49,8 +49,18 @@ void inorden(nodo_abb* raiz, void (*visitar)(const carta&)){
     visitar(raiz->info);
     inorden(raiz->der, visitar);
 }
-nodo_abb* buscar_por_categoria(nodo_abb* raiz, int categoria){
-
+nodo_abb* buscar_por_categoria(nodo_abb*raiz,int categoria){
+    nodo_abb* buscar_por_categoria(nodo_abb*raiz,int categoria); {
+    if (raiz==nullptr) 
+        return nullptr;
+    int cat=raiz->info.categoria;
+    if (categoria==cat) 
+        return raiz;
+    if (categoria<cat)  
+        return buscar_por_categoria(raiz->izq,categoria);
+    else                  
+        return buscar_por_categoria(raiz->der,categoria);
+}
 }
 void destruir_arbol(nodo_abb*& raiz){
     if(raiz==nullptr){
