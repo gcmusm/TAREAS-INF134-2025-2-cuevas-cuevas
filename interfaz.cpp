@@ -18,6 +18,10 @@ void imprimir_lista(const lista& L){
 void imprimir_primeras(const lista& L, int n){
 
 }
+void mostrar_carta_inorden(const carta& c){
+    imprimir_carta(c);
+    cout << "  ";
+}
 void imprimir_inorden(nodo_abb* raiz){
 
 }

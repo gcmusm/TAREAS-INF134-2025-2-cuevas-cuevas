@@ -59,6 +59,7 @@ nodo_abb* buscar_por_categoria(nodo_abb*raiz,int categoria){
         return buscar_por_categoria(raiz->izq,categoria);
     else                  
         return buscar_por_categoria(raiz->der,categoria);
+    }
 }
 void destruir_arbol(nodo_abb*& raiz){
     if(raiz==nullptr){
