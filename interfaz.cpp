@@ -1,4 +1,5 @@
 #include "interfaz.h"
+using namespace std;
 
 void imprimir_carta(const carta& c) {
     cout << c.palo << " " << c.categoria << " (" << c.valor << ")";
