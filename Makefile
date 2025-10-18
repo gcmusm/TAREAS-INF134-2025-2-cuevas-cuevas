@@ -3,6 +3,7 @@ CXX      := g++
 CXXFLAGS := -std=gnu++17 -Wall -Wextra -Wpedantic -O2
 # (opcional) para depurar usa: make debug
 DBGFLAGS := -g
+
 # ==== Archivos del proyecto ====
 SRCS := main.cpp \
         carta.cpp \
