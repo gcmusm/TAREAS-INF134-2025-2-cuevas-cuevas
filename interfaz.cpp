@@ -44,5 +44,8 @@ void imprimir_inorden(nodo_abb* raiz){
     cout << "]";
 }
 void imprimir_estado(int fichas, int pozo, int quedan_mazo){
-    
+        cout << "Fichas: " << fichas
+         << " | Pozo: " << pozo
+         << " | Mazo restante: " << quedan_mazo
+         << endl;
 }
