@@ -9,9 +9,11 @@ void imprimir_lista(const lista& L){
     while(actual != nullptr){
         imprimir_carta(actual->info);
         if(actual->sig != nullptr){
-            cout <<
+            cout << "  ";
         }
+        actual =actual->sig;
     }
+    cout<< "]";
 }
 void imprimir_primeras(const lista& L, int n){
 

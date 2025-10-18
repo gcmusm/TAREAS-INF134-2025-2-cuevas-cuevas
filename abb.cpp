@@ -26,7 +26,6 @@ nodo_abb* construir_balanceado(const carta v[], int inicio, int fin){
     return raiz;    
 }
 
-
 void construir_arboles_por_palo(const carta base[52], nodo_abb* arboles[4]){
     const char palos[4] = {'C', 'T', 'E', 'D'};
     for(int k =0; k<4; k++){
@@ -60,7 +59,6 @@ nodo_abb* buscar_por_categoria(nodo_abb*raiz,int categoria){
         return buscar_por_categoria(raiz->izq,categoria);
     else                  
         return buscar_por_categoria(raiz->der,categoria);
-}
 }
 void destruir_arbol(nodo_abb*& raiz){
     if(raiz==nullptr){
