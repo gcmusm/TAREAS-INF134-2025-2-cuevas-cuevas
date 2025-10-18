@@ -28,12 +28,26 @@ nodo_abb* construir_balanceado(const carta v[], int inicio, int fin){
 
 
 void construir_arboles_por_palo(const carta base[52], nodo_abb* arboles[4]){
-    const char palos[4] = 
-    
-
+    const char palos[4] = {'C', 'T', 'E', 'D'};
+    for(int k =0; k<4; k++){
+        carta cartas_palo[13];
+        int cantidad =0;
+        extraer_por_palo(base, palos[k], cartas_palo, cantidad);
+        if(cantidad ==13){
+            arboles[k = construir_balanceado(0, 12)];
+        }
+        else{
+            arboles[k] = nullptr;
+        }
+    }
 }
 void inorden(nodo_abb* raiz, void (*visitar)(const carta&)){
-
+    if(raiz==nullptr){
+        return;
+    }
+    inorden(raiz->izq, visitar);
+    visitar(raiz->info);
+    inorden(rais->der, visitar)
 }
 nodo_abb* buscar_por_categoria(nodo_abb* raiz, int categoria){
 
