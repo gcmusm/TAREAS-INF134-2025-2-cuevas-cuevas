@@ -1,50 +1,55 @@
 #include "interfaz.h"
 using namespace std;
 
+static void imprimir_par(const carta& c) {
+    // Formato pauta: "categoria+palo" (ej: 1C, 12E, 10C)
+    cout << c.categoria << c.palo;
+}
+
 void imprimir_carta(const carta& c) {
-    cout << c.palo << " " << c.categoria << " (" << c.valor << ")";
+    imprimir_par(c);
 }
+
 void imprimir_lista(const lista& L){
-    nodo* actual= L.head;
-    cout<< "[";
+    nodo* actual = L.head;
+    bool first = true;
     while(actual != nullptr){
-        imprimir_carta(actual->info);
-        if(actual->sig != nullptr){
-            cout << "  ";
-        }
-        actual =actual->sig;
+        if (!first) cout << " ";
+        imprimir_par(actual->info);
+        first = false;
+        actual = actual->sig;
     }
-    cout<< "]";
 }
+
 void imprimir_primeras(const lista& L, int n){
     nodo* actual = L.head;
-    int i=0;
-    cout << "[";
-    while(actual !=nullptr && i<n){
-        imprimir_carta(actual->info);
+    int i = 0;
+    bool first = true;
+    while(actual != nullptr && i < n){
+        if (!first) cout << " ";
+        imprimir_par(actual->info);
+        first = false;
         actual = actual->sig;
         i++;
-        if(actual !=nullptr && i<n){
-            cout <<"  ";
-        }   
     }
-    cout << "]";
 }
+
 void mostrar_carta_inorden(const carta& c){
-    imprimir_carta(c);
-    cout << "  ";
+    imprimir_par(c);
+    cout << " ";
 }
+
 void imprimir_inorden(nodo_abb* raiz){
     if(raiz == nullptr){
         cout << "(arbol vacio)";
         return;
     }
-    cout << "[";
     inorden(raiz, mostrar_carta_inorden);
-    cout << "]";
 }
+
 void imprimir_estado(int fichas, int pozo, int quedan_mazo){
-        cout << "Fichas: " << fichas
+    // Este se reemplaza desde main con el formato pauta, pero lo dejamos por compatibilidad
+    cout << "Fichas: " << fichas
          << " | Pozo: " << pozo
          << " | Mazo restante: " << quedan_mazo
          << endl;
